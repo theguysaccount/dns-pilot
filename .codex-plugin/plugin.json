@@ -1,0 +1,42 @@
+{
+  "name": "namecheap-dns",
+  "version": "0.2.0+codex.20261002040326",
+  "description": "Independent DNS control workflows for Namecheap, with change previews, mail protection, and public DNS checks.",
+  "author": {
+    "name": "Jack Jay"
+  },
+  "license": "MIT",
+  "keywords": [
+    "namecheap",
+    "dns",
+    "domains",
+    "verification",
+    "email"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "DNS Pilot for Namecheap",
+    "shortDescription": "Connect domains. Keep email intact. Verify every change.",
+    "longDescription": "Independent DNS workflows through Namecheap's own sign-in. Preview record changes, preserve unrelated records, and check public DNS. Includes a local planning companion. Not affiliated with or endorsed by Namecheap.",
+    "developerName": "Jack Jay",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "brandColor": "#F47645",
+    "logo": "./assets/icon.png",
+    "composerIcon": "./assets/icon.png",
+    "defaultPrompt": [
+      "Audit my domain's DNS and email records.",
+      "Connect my domain to my website without disrupting email.",
+      "Add a verification TXT record and check public DNS."
+    ],
+    "websiteURL": "https://dns-pilot.cuelayer.workers.dev",
+    "privacyPolicyURL": "https://dns-pilot.cuelayer.workers.dev/privacy",
+    "termsOfServiceURL": "https://dns-pilot.cuelayer.workers.dev/terms"
+  },
+  "homepage": "https://dns-pilot.cuelayer.workers.dev",
+  "repository": "https://github.com/theguysaccount/dns-pilot"
+}

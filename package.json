@@ -1,0 +1,37 @@
+{
+  "name": "namecheap-dns",
+  "version": "0.2.0",
+  "description": "Independent DNS planning and verification companion for Namecheap.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check": "npm run build && npm test",
+    "package": "node scripts/package.mjs",
+    "typecheck": "tsc -p tsconfig.hosted.json",
+    "build:site": "node scripts/build-site.mjs",
+    "verify:site": "node scripts/verify-site.mjs",
+    "package:submission": "node scripts/package-submission.mjs",
+    "deploy": "npm run typecheck && npm run build:site && wrangler deploy"
+  },
+  "keywords": [],
+  "author": "Jack Jay",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@cloudflare/workers-oauth-provider": "1.2.1",
+    "@modelcontextprotocol/sdk": "1.31.0",
+    "tldts": "7.4.16",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261002.1",
+    "esbuild": "0.28.2",
+    "sharp": "0.35.5",
+    "typescript": "7.0.2",
+    "wrangler": "4.146.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}

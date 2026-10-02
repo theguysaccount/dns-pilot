@@ -1,0 +1,47 @@
+{
+  "name": "dns-pilot",
+  "main": "hosted/worker.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "OAUTH_KV",
+      "id": "CREATE_YOUR_OWN_KV_NAMESPACE"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "WORKSPACES",
+        "class_name": "DNSWorkspace"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "DNSWorkspace"
+      ]
+    }
+  ],
+  "vars": {
+    "PUBLIC_ORIGIN": "https://YOUR_WORKER.YOUR_SUBDOMAIN.workers.dev",
+    "NAMECHEAP_CLIENT_ID": "",
+    "WRITES_ENABLED": "false",
+    "NAMECHEAP_OAUTH_READY": "false"
+  },
+  "observability": {
+    "enabled": false
+  }
+}

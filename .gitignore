@@ -1,0 +1,9 @@
+node_modules/
+artifacts/
+.env*
+*.log
+.DS_Store
+
+.wrangler/
+.private/
+wrangler.jsonc

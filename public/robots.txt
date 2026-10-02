@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /authorize
+Disallow: /callback
+Disallow: /oauth/
+Disallow: /mcp
+Sitemap: https://dns-pilot.cuelayer.workers.dev/sitemap.xml

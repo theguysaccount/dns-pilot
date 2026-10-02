@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "namecheap": {
+      "type": "http",
+      "url": "https://mcp.namecheap.com/mcp",
+      "enabled_tools": ["domains_list", "dns_records_get", "dns_records_save", "dns_records_delete"]
+    },
+    "dns-planner": { "command": "./bin/dns-planner", "cwd": ".", "startup_timeout_sec": 30 }
+  }
+}

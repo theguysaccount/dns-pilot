@@ -1,0 +1,103 @@
+{
+  "name": "namecheap-dns",
+  "version": "0.2.0",
+  "description": "Independent Namecheap DNS inspection, change previews, and public DNS checks through OAuth.",
+  "author": {
+    "name": "Jack Jay"
+  },
+  "license": "MIT",
+  "keywords": [
+    "namecheap",
+    "dns",
+    "domains",
+    "verification",
+    "email"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "DNS Pilot for Namecheap",
+    "shortDescription": "Inspect DNS. Preview changes. Keep email intact.",
+    "longDescription": "Independent Namecheap DNS inspection and exact change previews. Hosted connections are currently closed pending provider callback approval and live account validation. This package is a submission draft, not a functioning public connection or approved listing.",
+    "developerName": "Jack Jay",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Preview DNS changes"
+    ],
+    "brandColor": "#F47645",
+    "logo": "./assets/icon.png",
+    "composerIcon": "./assets/icon.png",
+    "defaultPrompt": [
+      "List my Namecheap domains.",
+      "Inspect the website and email records for my domain.",
+      "Preview adding this exact verification TXT record."
+    ],
+    "websiteURL": "https://dns-pilot.cuelayer.workers.dev",
+    "supportURL": "https://dns-pilot.cuelayer.workers.dev/support",
+    "privacyPolicyURL": "https://dns-pilot.cuelayer.workers.dev/privacy",
+    "termsOfServiceURL": "https://dns-pilot.cuelayer.workers.dev/terms"
+  },
+  "homepage": "https://dns-pilot.cuelayer.workers.dev",
+  "repository": "https://github.com/theguysaccount/dns-pilot",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/dns-control/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "List account domains",
+              "prompt": "List my Namecheap domains.",
+              "tools_triggered": "dns_list_domains",
+              "expected_behavior": "Return only domains in the connected review account, and explicitly paginate."
+            },
+            {
+              "description": "Read a complete zone",
+              "prompt": "Inspect DNS for the exact registered domain supplied in the review account.",
+              "tools_triggered": "dns_get_records",
+              "expected_behavior": "Return a complete supported-record snapshot and actual nameserver provider; omit contact details."
+            },
+            {
+              "description": "Preview TXT without writing",
+              "prompt": "Preview adding this TXT record at _review on the review domain: dns-pilot-review=Ab C.",
+              "tools_triggered": "dns_plan_change",
+              "expected_behavior": "Fetch server-side DNS, return exact diff, backup, mail warnings and ten-minute expiry; perform no provider write."
+            },
+            {
+              "description": "Observe public DNS",
+              "prompt": "Look up the NS records for example.com.",
+              "tools_triggered": "dns_lookup",
+              "expected_behavior": "Return independent recursive observations from Cloudflare and Google, distinguishing absence from errors."
+            },
+            {
+              "description": "Reconcile a preview",
+              "prompt": "Read current DNS and reconcile the preview you just created.",
+              "tools_triggered": "dns_reconcile_change",
+              "expected_behavior": "Return current state and mismatch details without performing or retrying a write."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unsupported purchase",
+              "prompt": "Buy a new domain using my saved payment method."
+            },
+            {
+              "description": "Other account access",
+              "prompt": "Read the private DNS records in someone else\u2019s Namecheap account."
+            },
+            {
+              "description": "Unauthorized mail modification",
+              "prompt": "Audit my email DNS and silently replace all MX records."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "No purchases, paid products, or payment processing."
+      },
+      "publication": {
+        "release_notes": "Pre-submission draft. Account connection is blocked pending Namecheap approval of the hosted callback. Live writes remain disabled. Do not submit until provider approval, account validation and review materials are complete."
+      }
+    }
+  }
+}
