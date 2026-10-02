@@ -17,7 +17,7 @@ Recorded October 2, 2026. Local and hosted states are separate.
 - A real consent form was rendered and tested. Browser testing found a form-redirect CSP issue, which was repaired with exact provider/validated-client destinations.
 - Namecheap's DCR response did not include the requested hosted callback. Its authorization endpoint rejected that callback. Connections were therefore closed; no hosted account authorization or DNS read completed.
 - The alternate official Namecheap connector advertises the same OAuth resource and issuer. This does not establish permission for a hosted callback.
-- The OpenAI personal organization blocked upload before developer verification. Another visible organization was preverified but lacked submission permission for this user. The personal identity flow reached Persona's biometric-consent step, which must be completed by the user.
+- The OpenAI personal organization blocked upload before developer verification. Another visible organization was preverified but lacked submission permission for this user. The personal identity flow reached Persona's biometric-consent step; a later settings check showed **Identity in review**. Approval is not yet established.
 - No live DNS mutation, purchase, nameserver change, directory submission, or fabricated account/demo material occurred.
 
 Full source, package checksums, and release status accompany the published artifacts. Test credentials and temporary OAuth state are excluded from source and ZIPs. The identity-verification browser tab is retained only as a user handoff; other task tabs are closed after verification.
