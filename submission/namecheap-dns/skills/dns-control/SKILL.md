@@ -5,7 +5,7 @@ description: Inspect and manage Namecheap DNS through DNS Pilot. Use for domain 
 
 # DNS Pilot for Namecheap
 
-This independent plugin uses the hosted DNS Pilot connection and Namecheap OAuth. Never request credentials in chat or claim provider endorsement or directory approval.
+This independent plugin uses the hosted DNS Pilot OAuth connection. The current review account is an isolated sandbox with synthetic example.com records; real Namecheap sign-in remains pending provider callback approval. Always disclose environment=sandbox and never describe simulated provider_state_verified as a real DNS change. Public DNS lookups use real resolvers and must be distinguished from the sample zone. Never request credentials in chat or claim provider endorsement or directory approval.
 
 1. Connect through the host's OAuth flow. Use `dns_list_domains` to identify the exact registered domain. Follow `nextSkip` until a portfolio request is complete. Do not expose contact details.
 2. Use `dns_get_records` for the full snapshot and actual nameservers. Custom nameservers mean DNS must be edited at the authoritative provider. Never migrate nameservers to make a record edit work.

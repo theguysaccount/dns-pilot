@@ -18,12 +18,13 @@
   "interface": {
     "displayName": "DNS Pilot for Namecheap",
     "shortDescription": "Inspect DNS. Preview changes.",
-    "longDescription": "Independent Namecheap DNS inspection and exact change previews. Hosted connections are currently closed pending provider callback approval and live account validation. This package is a submission draft, not a functioning public connection or approved listing.",
+    "longDescription": "Inspect DNS, preview exact changes, preserve email records, and check public DNS. This independent beta includes a working isolated reviewer sandbox with synthetic example.com records. Real Namecheap account connections and live DNS writes remain unavailable pending provider callback approval. Not affiliated with Namecheap.",
     "developerName": "Jack Jay",
-    "category": "Productivity",
+    "category": "Developer Tools",
     "capabilities": [
       "Read",
-      "Preview DNS changes"
+      "Preview DNS changes",
+      "Sandbox testing"
     ],
     "brandColor": "#F47645",
     "logo": "./assets/icon.png",
@@ -50,19 +51,19 @@
               "description": "List account domains",
               "prompt": "List my Namecheap domains.",
               "tools_triggered": "dns_list_domains",
-              "expected_behavior": "Return only domains in the connected review account, and explicitly paginate."
+              "expected_behavior": "Return the isolated sandbox sample domain example.com with environment=sandbox; no real account data. Follow nextSkip for pagination."
             },
             {
               "description": "Read a complete zone",
-              "prompt": "Inspect DNS for the exact registered domain supplied in the review account.",
+              "prompt": "Inspect the sample DNS for example.com in this sandbox account.",
               "tools_triggered": "dns_get_records",
-              "expected_behavior": "Return a complete supported-record snapshot and actual nameserver provider; omit contact details."
+              "expected_behavior": "Return a complete synthetic zone with A, CNAME, MX, SPF and DMARC, explicitly marked sandbox; no live Namecheap access."
             },
             {
               "description": "Preview TXT without writing",
-              "prompt": "Preview adding this TXT record at _review on the review domain: dns-pilot-review=Ab C.",
+              "prompt": "Preview adding this TXT record at _review on example.com: dns-pilot-review=Ab C.",
               "tools_triggered": "dns_plan_change",
-              "expected_behavior": "Fetch server-side DNS, return exact diff, backup, mail warnings and ten-minute expiry; perform no provider write."
+              "expected_behavior": "Return exact TXT addition, five unchanged records, mailChanged=false, backup and ten-minute expiry. Do not apply."
             },
             {
               "description": "Observe public DNS",
@@ -74,7 +75,7 @@
               "description": "Reconcile a preview",
               "prompt": "Read current DNS and reconcile the preview you just created.",
               "tools_triggered": "dns_reconcile_change",
-              "expected_behavior": "Return current state and mismatch details without performing or retrying a write."
+              "expected_behavior": "Before apply, report planned TXT missing; after explicitly authorized sandbox apply, report provider_state_verified. Both reconciliation cases are read-only and labeled sandbox."
             }
           ],
           "negative": [
@@ -93,10 +94,11 @@
           ]
         },
         "commerce": false,
-        "commerce_description": "No purchases, paid products, or payment processing."
+        "commerce_description": "No purchases, paid products, or payment processing.",
+        "demo_recording_url": "https://dns-pilot.cuelayer.workers.dev/review-media/dns-pilot-captioned-walkthrough.mp4"
       },
       "publication": {
-        "release_notes": "Beta package uploaded for portal assessment. Account connection is blocked pending Namecheap approval of the hosted callback. Live writes remain disabled. Live account validation and review demonstration materials remain incomplete."
+        "release_notes": "Adds an isolated reviewer sandbox, dedicated OAuth test account, and captioned recording of the deployed MCP workflow. All five positive cases, safety mechanisms, OAuth PKCE, and refresh were tested. Public DNS lookups use real Cloudflare and Google answers. Real Namecheap connection and DNS writes remain disabled pending provider callback approval; sandbox results are synthetic and cannot establish live-provider readiness."
       }
     }
   }

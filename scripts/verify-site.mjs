@@ -14,7 +14,9 @@ for(const path of ['','privacy','terms','support']){
 }
 for(const path of ['robots.txt','sitemap.xml','style.css','icon.png'])assert.equal((await fetch(`${origin}/${path}`)).status,200);
 const health=await(await fetch(origin+'/health')).json();assert.equal(health.writesEnabled,false);assert.equal(health.connectionReady,false);
-assert.equal((await fetch(origin+'/authorize')).status,503);
+assert.equal(health.reviewerSandboxReady,true);
+assert.equal((await fetch(origin+'/authorize')).status,400);
+const review=await fetch(origin+'/review');assert.equal(review.status,200);assert.match(review.headers.get('x-robots-tag'),/noindex/);assert.match(await review.text(),/synthetic and isolated/);
 const unauth=await fetch(origin+'/mcp',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({jsonrpc:'2.0',method:'initialize',id:1})});assert.equal(unauth.status,401);assert.ok(unauth.headers.get('www-authenticate')?.includes('oauth-protected-resource'));
 const fake=await fetch(origin+'/mcp',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer forged'},body:'{}'});assert.equal(fake.status,401);
 const meta=await(await fetch(origin+'/.well-known/oauth-protected-resource/mcp')).json();assert.equal(meta.resource,origin+'/mcp');assert.deepEqual(meta.authorization_servers,[origin]);

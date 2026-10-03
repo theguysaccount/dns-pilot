@@ -3,7 +3,7 @@ import { Namecheap } from './upstream';
 import type { Env } from './worker';
 
 export class WorkspaceEngine {
-  constructor(private ctx: {storage: any}, private env: Pick<Env, 'WRITES_ENABLED'>, private createProvider = () => new Namecheap()) {}
+  constructor(private ctx: {storage: any}, private env: Pick<Env, 'WRITES_ENABLED'>, private createProvider: () => Pick<Namecheap, 'connect' | 'close' | 'domains' | 'snapshot' | 'call'> = () => new Namecheap()) {}
   private queue: Promise<unknown> = Promise.resolve();
   fetch(request: Request): Promise<Response> {
     const task = () => this.handle(request);

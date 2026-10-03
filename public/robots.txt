@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /review
 Disallow: /authorize
 Disallow: /callback
 Disallow: /oauth/

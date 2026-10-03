@@ -7,7 +7,7 @@ export class Namecheap {
   client: Client;
   constructor() { this.client = new Client({ name: 'dns-pilot', version: '0.2.0' }); }
   async connect(token: string) {
-    await this.client.connect(new StreamableHTTPClientTransport(new URL('https://mcp.namecheap.com/mcp'), { requestInit: { headers: { Authorization: `Bearer ${token}` }, redirect: 'error' } }), { timeout: 15_000 });
+    await this.client.connect(new StreamableHTTPClientTransport(new URL('https://mcp.namecheap.com/mcp'), { requestInit: { headers: { Authorization: `Bearer ${token}` }, redirect: 'manual' } }), { timeout: 15_000 });
   }
   async close() { await this.client.close(); }
   async call(name: string, args: Record<string, unknown>): Promise<any> {
@@ -51,7 +51,7 @@ export async function publicDNS(name: string, type: string) {
   const observations = await Promise.all(servers.map(async ([resolver, endpoint]) => {
     try {
       const url = new URL(endpoint); url.searchParams.set('name', name); url.searchParams.set('type', type);
-      const response = await fetch(url, { headers: { Accept: 'application/dns-json' }, signal: AbortSignal.timeout(5000), redirect: 'error' });
+      const response = await fetch(url, { headers: { Accept: 'application/dns-json' }, signal: AbortSignal.timeout(5000), redirect: 'manual' });
       if (!response.ok) return { resolver, status: 'error' };
       const data = await response.json() as any;
       return { resolver, status: data.Status === 0 ? (data.Answer?.length ? 'answer' : 'no_answer') : data.Status === 3 ? 'no_answer' : 'error', dnsStatus: data.Status, answers: data.Answer ?? [] };
