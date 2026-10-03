@@ -17,7 +17,7 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "DNS Pilot for Namecheap",
-    "shortDescription": "Inspect DNS. Preview changes. Keep email intact.",
+    "shortDescription": "Inspect DNS. Preview changes.",
     "longDescription": "Independent Namecheap DNS inspection and exact change previews. Hosted connections are currently closed pending provider callback approval and live account validation. This package is a submission draft, not a functioning public connection or approved listing.",
     "developerName": "Jack Jay",
     "category": "Productivity",
@@ -96,7 +96,7 @@
         "commerce_description": "No purchases, paid products, or payment processing."
       },
       "publication": {
-        "release_notes": "Pre-submission draft. Account connection is blocked pending Namecheap approval of the hosted callback. Live writes remain disabled. Do not submit until provider approval, account validation and review materials are complete."
+        "release_notes": "Beta package uploaded for portal assessment. Account connection is blocked pending Namecheap approval of the hosted callback. Live writes remain disabled. Live account validation and review demonstration materials remain incomplete."
       }
     }
   }
