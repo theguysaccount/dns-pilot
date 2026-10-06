@@ -1,7 +1,7 @@
 {
   "name": "namecheap-dns",
-  "version": "0.2.1",
-  "description": "DNS Pilot: independent DNS inspection, exact change planning, mail-record preservation, and public DNS checks.",
+  "version": "0.2.2",
+  "description": "Compare public DNS resolver answers and inspect synthetic records in an isolated reviewer workspace.",
   "author": {
     "name": "Jackson Alan Jesionowski"
   },
@@ -17,22 +17,22 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "DNS Pilot",
-    "shortDescription": "Inspect DNS. Preview changes.",
-    "longDescription": "DNS Pilot is developed and operated by Jackson Alan Jesionowski (Jack Jay), its verified individual publisher. Inspect DNS, preview exact changes, preserve email records, and check public DNS. Reviewer access uses isolated synthetic example.com records. Real Namecheap connections and live writes await provider callback approval. Namecheap is a third-party integration; no affiliation or endorsement.",
+    "shortDescription": "Check DNS. Inspect samples.",
+    "longDescription": "Compare public DNS answers from Cloudflare and Google. In the private reviewer workspace, inspect synthetic example.com records, create TXT-change previews, and test reconciliation. Sample actions do not change public DNS. Developed and operated by Jackson Alan Jesionowski (Jack Jay). Namecheap account connections and live writes are unavailable pending provider approval. No Namecheap affiliation or endorsement.",
     "developerName": "Jackson Alan Jesionowski",
     "category": "Developer Tools",
     "capabilities": [
-      "Read",
-      "Preview DNS changes",
-      "Sandbox testing"
+      "Public DNS lookup",
+      "Sample record inspection",
+      "Sample change previews"
     ],
     "brandColor": "#F47645",
     "logo": "./assets/icon.png",
     "composerIcon": "./assets/icon.png",
     "defaultPrompt": [
-      "List my Namecheap domains.",
-      "Inspect the website and email records for my domain.",
-      "Preview adding this exact verification TXT record."
+      "Look up the public NS records for example.com.",
+      "In the reviewer sandbox, inspect the synthetic example.com records.",
+      "In the reviewer sandbox, preview a TXT addition without applying it."
     ],
     "websiteURL": "https://dns-pilot.cuelayer.workers.dev",
     "supportURL": "https://dns-pilot.cuelayer.workers.dev/support",
@@ -49,7 +49,7 @@
           "positive": [
             {
               "description": "List account domains",
-              "prompt": "List my Namecheap domains.",
+              "prompt": "In the reviewer sandbox, list the sample domains.",
               "tools_triggered": "dns_list_domains",
               "expected_behavior": "Return the isolated sandbox sample domain example.com with environment=sandbox; no real account data. Follow nextSkip for pagination."
             },
@@ -98,7 +98,7 @@
         "demo_recording_url": "https://dns-pilot.cuelayer.workers.dev/review-media/dns-pilot-captioned-walkthrough.mp4"
       },
       "publication": {
-        "release_notes": "Ownership clarification for the October 5 review: DNS Pilot is developed and operated by Jackson Alan Jesionowski (Jack Jay), the verified individual publisher. The package, public website, privacy notice, terms, support page, and repository identify the same publisher. Namecheap is only the third-party integration and its trademark is not claimed. Renames the display title to DNS Pilot and removes Namecheap from share-card branding. Reviewer sandbox and captioned recording remain available. Real Namecheap connection and live writes remain disabled pending provider callback approval; sandbox results are synthetic."
+        "release_notes": "Ownership clarification for the October 5 review: DNS Pilot is developed and operated by Jackson Alan Jesionowski (Jack Jay), the verified individual publisher. The package, public website, privacy notice, terms, support page, and repository identify the same publisher. Namecheap is only the third-party integration and its trademark is not claimed. Renames the display title to DNS Pilot and removes Namecheap from share-card branding. Reviewer sandbox and captioned recording remain available. Real Namecheap connection and live writes remain disabled pending provider callback approval; sandbox results are synthetic. Also replaces unsupported customer-account promises with public resolver checks and explicitly labeled sample-record prompts."
       }
     }
   }

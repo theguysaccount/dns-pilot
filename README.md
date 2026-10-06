@@ -54,4 +54,4 @@ See [research](docs/research.md), [record contract](docs/record-reference.md), [
 
 ## Publisher and review status
 
-DNS Pilot is developed and operated by Jackson Alan Jesionowski (Jack Jay), its verified individual publisher. Namecheap is a third-party integration; its brand and trademark are not owned by this project. The October 5 OpenAI review requested ownership verification. The 0.2.1 hosted revision aligns the public publisher and package identity. Approval and publication remain separate, unconfirmed states. Real hosted Namecheap access still awaits provider callback approval.
+DNS Pilot is developed and operated by Jackson Alan Jesionowski (Jack Jay), its verified individual publisher. Namecheap is a third-party integration; its brand and trademark are not owned by this project. The October 5 OpenAI review requested ownership verification. The 0.2.2 hosted revision aligns the public publisher and package identity. Approval and publication remain separate, unconfirmed states. Real hosted Namecheap access still awaits provider callback approval.
