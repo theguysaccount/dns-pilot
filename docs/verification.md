@@ -1,6 +1,6 @@
 # Release verification
 
-Recorded October 3, 2026. Local, reviewer sandbox, and live Namecheap states are separate.
+Updated October 6, 2026. Local, reviewer sandbox, and live Namecheap states are separate.
 
 ## Automated evidence
 
@@ -21,8 +21,11 @@ Recorded October 3, 2026. Local, reviewer sandbox, and live Namecheap states are
 - Dedicated login URL, tenant description, username, password, and sandbox instructions saved in OpenAI's secure reviewer form. Five positive and three negative cases plus recording URL imported from the ZIP.
 - The 123.93-second screen recording is an actual browser capture with permanent on-screen captions. Its public MP4 URL returns video/mp4 and played in Chrome with readyState 4, advancing time, and no media error. It shows synthetic provider actions and real public DNS checks. Negative cases verify server mechanisms, not a separately tested model conversation.
 - Namecheap's requested callback is still unapproved, so no real Namecheap account authorization, live account DNS read, or live DNS mutation occurred.
-- Final OpenAI submission awaits the owner's legal attestations. No directory approval or listing is claimed.
+- OpenAI received the initial submission October 3. The October 5 review requested ownership verification. Portal status checked October 6 was Changes required / Not published. Hosted revision 0.2.1 was uploaded under Individual — JACKSON ALAN JESIONOWSKI, and its developer field now displays Jackson Alan Jesionowski. Approval and publication remain unconfirmed.
+- Ownership revision deployed as Cloudflare version 57c865be-d527-44d9-bc80-e7894e12a29d. All 28 tests, hosted typecheck and public-page checks passed. Four unique public share cards now use the independent DNS Pilot branding. Every public page identifies the same legal publisher.
 
 ## Privacy and release boundaries
 
 Reviewer credentials and temporary OAuth state are excluded from source and ZIPs. The public recording contains only synthetic account data. Private reviewer, consent, and error pages are share-artwork exceptions and use noindex; all four public pages have page-specific cards. Existing immutable beta release assets are not overwritten by this reviewer update.
+
+October 6 direct deployed verification: OAuth PKCE and refresh, six discovered tools, all five positive review cases and three negative mechanisms passed. Public DNS answers came from both Cloudflare and Google. A transient connection timeout on the first attempt cleared on the subsequent run. Current portal draft 0.2.1 is configured, domain verified, authorized, with No issues found in the MCP scan. Reviewer details are saved. Final legal attestations remain unchecked and no resubmission is claimed.

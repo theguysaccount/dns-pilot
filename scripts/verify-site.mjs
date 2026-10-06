@@ -5,6 +5,7 @@ const origin=process.env.PUBLIC_ORIGIN||'https://dns-pilot.cuelayer.workers.dev'
 const hashes=new Set();
 for(const path of ['','privacy','terms','support']){
  const response=await fetch(`${origin}/${path}`);assert.equal(response.status,200);const html=await response.text();
+ assert.match(html,/Jackson Alan Jesionowski/);assert.match(html,/Namecheap is a third-party integration/);
  assert.match(html,/<html lang="en">/);assert.equal((html.match(/<h1>/g)||[]).length,1);assert.match(html,/<meta name="description" content="[^"]+">/);
  assert.ok(html.includes(`<link rel="canonical" href="${origin}/${path}">`));
  const image=html.match(/property="og:image" content="([^"]+)"/)?.[1];assert.equal(image,`${origin}/share/${path||'home'}.png`);assert.ok(html.includes(`name="twitter:image" content="${image}"`));

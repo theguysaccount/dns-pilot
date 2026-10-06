@@ -1,4 +1,4 @@
-# DNS Pilot for Namecheap
+# DNS Pilot
 
 Independent DNS workflows: preview exact changes, preserve unrelated records, flag email changes, and verify provider state separately from public DNS.
 
@@ -50,4 +50,8 @@ The test suite covers record semantics, real local MCP transport, account isolat
 
 Copy `wrangler.example.jsonc` to `wrangler.jsonc`, provision your own KV namespace, and fill your own account, origin and approved provider client. Deployment config, test credentials, and account data are ignored by Git. `npm run verify:site` validates the live site's metadata, distinct share images, and public authentication boundaries.
 
-See [research](docs/research.md), [record contract](docs/record-reference.md), [verification evidence](docs/verification.md), and [public release gates](docs/public-launch.md). Independent project by Jack Jay; not affiliated with or endorsed by Namecheap or OpenAI.
+See [research](docs/research.md), [record contract](docs/record-reference.md), [verification evidence](docs/verification.md), and [public release gates](docs/public-launch.md). Independent project developed and operated by Jackson Alan Jesionowski (Jack Jay); not affiliated with or endorsed by Namecheap or OpenAI.
+
+## Publisher and review status
+
+DNS Pilot is developed and operated by Jackson Alan Jesionowski (Jack Jay), its verified individual publisher. Namecheap is a third-party integration; its brand and trademark are not owned by this project. The October 5 OpenAI review requested ownership verification. The 0.2.1 hosted revision aligns the public publisher and package identity. Approval and publication remain separate, unconfirmed states. Real hosted Namecheap access still awaits provider callback approval.

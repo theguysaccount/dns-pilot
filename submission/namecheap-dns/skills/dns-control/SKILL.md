@@ -3,7 +3,9 @@ name: dns-control
 description: Inspect and manage Namecheap DNS through DNS Pilot. Use for domain records, website routing, TXT verification, email DNS, previews, and public DNS troubleshooting.
 ---
 
-# DNS Pilot for Namecheap
+# DNS Pilot
+
+Developed and operated by Jackson Alan Jesionowski (Jack Jay). Namecheap is an independent third-party integration; no affiliation or trademark ownership is claimed.
 
 This independent plugin uses the hosted DNS Pilot OAuth connection. The current review account is an isolated sandbox with synthetic example.com records; real Namecheap sign-in remains pending provider callback approval. Always disclose environment=sandbox and never describe simulated provider_state_verified as a real DNS change. Public DNS lookups use real resolvers and must be distinguished from the sample zone. Never request credentials in chat or claim provider endorsement or directory approval.
 

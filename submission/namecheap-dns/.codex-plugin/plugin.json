@@ -1,9 +1,9 @@
 {
   "name": "namecheap-dns",
-  "version": "0.2.0",
-  "description": "Independent Namecheap DNS inspection, change previews, and public DNS checks through OAuth.",
+  "version": "0.2.1",
+  "description": "DNS Pilot: independent DNS inspection, exact change planning, mail-record preservation, and public DNS checks.",
   "author": {
-    "name": "Jack Jay"
+    "name": "Jackson Alan Jesionowski"
   },
   "license": "MIT",
   "keywords": [
@@ -16,10 +16,10 @@
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "DNS Pilot for Namecheap",
+    "displayName": "DNS Pilot",
     "shortDescription": "Inspect DNS. Preview changes.",
-    "longDescription": "Inspect DNS, preview exact changes, preserve email records, and check public DNS. This independent beta includes a working isolated reviewer sandbox with synthetic example.com records. Real Namecheap account connections and live DNS writes remain unavailable pending provider callback approval. Not affiliated with Namecheap.",
-    "developerName": "Jack Jay",
+    "longDescription": "DNS Pilot is developed and operated by Jackson Alan Jesionowski (Jack Jay), its verified individual publisher. Inspect DNS, preview exact changes, preserve email records, and check public DNS. Reviewer access uses isolated synthetic example.com records. Real Namecheap connections and live writes await provider callback approval. Namecheap is a third-party integration; no affiliation or endorsement.",
+    "developerName": "Jackson Alan Jesionowski",
     "category": "Developer Tools",
     "capabilities": [
       "Read",
@@ -98,7 +98,7 @@
         "demo_recording_url": "https://dns-pilot.cuelayer.workers.dev/review-media/dns-pilot-captioned-walkthrough.mp4"
       },
       "publication": {
-        "release_notes": "Adds an isolated reviewer sandbox, dedicated OAuth test account, and captioned recording of the deployed MCP workflow. All five positive cases, safety mechanisms, OAuth PKCE, and refresh were tested. Public DNS lookups use real Cloudflare and Google answers. Real Namecheap connection and DNS writes remain disabled pending provider callback approval; sandbox results are synthetic and cannot establish live-provider readiness."
+        "release_notes": "Ownership clarification for the October 5 review: DNS Pilot is developed and operated by Jackson Alan Jesionowski (Jack Jay), the verified individual publisher. The package, public website, privacy notice, terms, support page, and repository identify the same publisher. Namecheap is only the third-party integration and its trademark is not claimed. Renames the display title to DNS Pilot and removes Namecheap from share-card branding. Reviewer sandbox and captioned recording remain available. Real Namecheap connection and live writes remain disabled pending provider callback approval; sandbox results are synthetic."
       }
     }
   }

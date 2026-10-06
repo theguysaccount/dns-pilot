@@ -10,5 +10,5 @@ if(manifest.interface.shortDescription.length>30)throw new Error('Directory subt
 const config=JSON.parse(fs.readFileSync(root+'/.mcp.json'));if(Object.keys(config.mcpServers).length!==1)throw new Error('Public package must use one controlled MCP endpoint');
 for(const name of files)if(/(^|\/)(\.env|\.private|node_modules)|\.log$/.test(name))throw new Error('Unsafe inclusion');
 fs.mkdirSync('artifacts',{recursive:true});
-const target=path.resolve('artifacts/dns-pilot-hosted-0.2.0.zip');execFileSync('/usr/bin/zip',['-q','-FS',target,...files],{cwd:root});
+const target=path.resolve(`artifacts/dns-pilot-hosted-${manifest.version}.zip`);execFileSync('/usr/bin/zip',['-q','-FS',target,...files],{cwd:root});
 fs.writeFileSync(target+'.sha256',createHash('sha256').update(fs.readFileSync(target)).digest('hex')+'  '+path.basename(target)+'\n');console.log(target);
