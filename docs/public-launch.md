@@ -1,14 +1,16 @@
 # Public release status
 
-As of October 6, 2026:
+As of October 8, 2026:
 
 - Local Codex plugin: built, packaged, and installed in the author's personal marketplace. Real Namecheap account login remains unverified.
 - Public website and controlled endpoint: deployed at https://dns-pilot.cuelayer.workers.dev with separate privacy, terms, and support pages and unique share cards.
 - Reviewer access: working dedicated sandbox credentials saved privately in OpenAI's review dashboard. Login requires no MFA, email code, or additional setup. Every sign-in creates an isolated synthetic example.com workspace. Credentials are excluded from this repository and submission ZIP.
 - Captioned screen recording: [2:04 walkthrough](https://dns-pilot.cuelayer.workers.dev/review-media/dns-pilot-captioned-walkthrough.mp4). Actual browser capture demonstrates the deployed MCP handler, synthetic read/preview/apply/read-back, public DNS observations, and safety mechanisms. It does not claim live Namecheap access or demonstrate model conversation routing.
-- OpenAI: initial submission received October 3, 2026. October 5 review rejected it because ownership could not be confirmed. Portal status checked October 6: **Changes required / Not published**. Revision 0.2.2 aligns the package and public website with verified individual publisher Jackson Alan Jesionowski (Jack Jay). Revision uploaded under the verified individual. Current revision status directly confirmed later October 6: **In review / Not published**, with MCP **Configured**, domain verified, OAuth authorized and latest MCP scan showing **No issues found**. Reviewer information, private credentials, five positive/three negative cases and captioned recording are saved. Jack explicitly confirmed submission and the final declarations. The portal now shows version 0.2.2 In review and offers Cancel review; approval and publication are unconfirmed. Live-provider readiness remains unresolved.
+- OpenAI: version **0.2.2 Approved and Published**, directly confirmed October 8 under verified individual publisher Jackson Alan Jesionowski. Publication succeeded after Jack explicitly requested it. The management portal shows 0.2.2 Published, MCP Configured, and skill Checks passed. The ChatGPT listing is available with an Install plugin button. The prior October 5 ownership rejection was addressed by the corrected publisher identity. Live Namecheap access remains unavailable as disclosed in the published metadata.
 - Portal submission: https://platform.openai.com/plugins/manage/plugin_asdk_app_6ac079ad82f88191ade560b44f32ef12
-- Version ID: `appsub_6ac4d39872248191b6878047c478825d`.
+- Published listing: https://chatgpt.com/plugins/plugin_asdk_app_6ac079ad82f88191ade560b44f32ef12
+- Published release ID: `pluginrel_ebdfe46c49348191abcc5be133297df6`.
+- Submission version ID: `appsub_6ac4d39872248191b6878047c478825d`.
 - Worker deployment: `735f1adb-1e91-477d-9baf-3167593382ed`.
 
 ## Live provider limitation
@@ -28,3 +30,7 @@ The saved reviewer instructions explain both OAuth connection and the private re
 The private `/review` console and consent/error pages are documented exceptions to public-page share artwork. Review pages and the recording return noindex directives; four public marketing/legal/support pages have distinct verified social cards.
 
 References: [OpenAI submission](https://developers.openai.com/plugins/deploy/submission), [Namecheap MCP](https://www.namecheap.com/support/knowledgebase/article.aspx/10824/34/namecheap-mcp/).
+
+## Publication verification
+
+October 8: OpenAI displayed Plugin published, then version 0.2.2 Published. The ChatGPT listing displayed DNS Pilot, Jackson Alan Jesionowski, version 0.2.2, the published capability disclosures, and Install plugin. Private screenshot evidence is in artifacts/openai-published-0.2.2.jpg and artifacts/chatgpt-dns-pilot-published-0.2.2.jpg. No customer DNS or provider authorization setting was changed. The completed daily approval monitor was deleted.

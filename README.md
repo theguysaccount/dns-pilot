@@ -2,7 +2,7 @@
 
 Independent DNS workflows: preview exact changes, preserve unrelated records, flag email changes, and verify provider state separately from public DNS.
 
-**The local Codex plugin is packaged. The hosted service is an early preview, not open for account connections and not submitted to the OpenAI directory.** Namecheap's registration endpoint returned a client ID but did not include our requested callback URL; an actual hosted authorization attempt failed. Developer identity verification and review-account testing are also incomplete.
+**DNS Pilot 0.2.2 is approved and published in the OpenAI directory as of October 8, 2026.** [Install DNS Pilot in ChatGPT](https://chatgpt.com/plugins/plugin_asdk_app_6ac079ad82f88191ade560b44f32ef12). Public DNS lookup is available. Hosted Namecheap account connections and live writes remain disabled pending provider callback approval; sample record actions use an isolated reviewer workspace.
 
 [Website](https://dns-pilot.cuelayer.workers.dev) · [Downloads](https://github.com/theguysaccount/dns-pilot/releases) · [Support](https://dns-pilot.cuelayer.workers.dev/support) · [Release status](docs/public-launch.md)
 
@@ -54,4 +54,4 @@ See [research](docs/research.md), [record contract](docs/record-reference.md), [
 
 ## Publisher and review status
 
-DNS Pilot is developed and operated by Jackson Alan Jesionowski (Jack Jay), its verified individual publisher. Namecheap is a third-party integration; its brand and trademark are not owned by this project. The October 5 OpenAI review requested ownership verification. The 0.2.2 hosted revision aligns the public publisher and package identity. Approval and publication remain separate, unconfirmed states. Real hosted Namecheap access still awaits provider callback approval.
+DNS Pilot is developed and operated by Jackson Alan Jesionowski (Jack Jay), its verified individual publisher. Namecheap is a third-party integration; its brand and trademark are not owned by this project. The October 5 OpenAI review requested ownership verification. The 0.2.2 hosted revision aligns the public publisher and package identity. OpenAI approved the revision, and publication was completed October 8. The ChatGPT listing was directly verified with version 0.2.2 and an Install plugin button. Real hosted Namecheap access still awaits provider callback approval.

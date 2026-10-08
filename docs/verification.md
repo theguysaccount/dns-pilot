@@ -1,6 +1,6 @@
 # Release verification
 
-Updated October 6, 2026. Local, reviewer sandbox, and live Namecheap states are separate.
+Updated October 8, 2026. Local, reviewer sandbox, and live Namecheap states are separate.
 
 ## Automated evidence
 
@@ -21,7 +21,7 @@ Updated October 6, 2026. Local, reviewer sandbox, and live Namecheap states are 
 - Dedicated login URL, tenant description, username, password, and sandbox instructions saved in OpenAI's secure reviewer form. Five positive and three negative cases plus recording URL imported from the ZIP.
 - The 123.93-second screen recording is an actual browser capture with permanent on-screen captions. Its public MP4 URL returns video/mp4 and played in Chrome with readyState 4, advancing time, and no media error. It shows synthetic provider actions and real public DNS checks. Negative cases verify server mechanisms, not a separately tested model conversation.
 - Namecheap's requested callback is still unapproved, so no real Namecheap account authorization, live account DNS read, or live DNS mutation occurred.
-- OpenAI received the initial submission October 3. The October 5 review requested ownership verification. Portal status checked October 6 was Changes required / Not published. Hosted revision 0.2.2 was uploaded under Individual — JACKSON ALAN JESIONOWSKI, and its developer field now displays Jackson Alan Jesionowski. A later direct portal check October 6 confirmed version 0.2.2 In review / Not published, with MCP Configured and skill Checks passed. Jack explicitly confirmed submission and the final declarations. Approval and publication remain unconfirmed.
+- OpenAI received the initial submission October 3. The October 5 review requested ownership verification. Portal status checked October 6 was Changes required / Not published. Hosted revision 0.2.2 was uploaded under Individual — JACKSON ALAN JESIONOWSKI, and its developer field now displays Jackson Alan Jesionowski. A later direct portal check October 6 confirmed version 0.2.2 In review / Not published, with MCP Configured and skill Checks passed. Jack explicitly confirmed submission and the final declarations. OpenAI approval and publication were directly confirmed October 8; see the publication evidence below.
 - Ownership revision deployed as Cloudflare version 735f1adb-1e91-477d-9baf-3167593382ed. All 28 tests, hosted typecheck and public-page checks passed. Four unique public share cards now use the independent DNS Pilot branding. Every public page identifies the same legal publisher.
 
 ## Privacy and release boundaries
@@ -29,3 +29,7 @@ Updated October 6, 2026. Local, reviewer sandbox, and live Namecheap states are 
 Reviewer credentials and temporary OAuth state are excluded from source and ZIPs. The public recording contains only synthetic account data. Private reviewer, consent, and error pages are share-artwork exceptions and use noindex; all four public pages have page-specific cards. Existing immutable beta release assets are not overwritten by this reviewer update.
 
 October 6 direct deployed verification: OAuth PKCE and refresh, six discovered tools, all five positive review cases and three negative mechanisms passed. Public DNS answers came from both Cloudflare and Google. A transient connection timeout on the first attempt cleared on the subsequent run. Current portal revision 0.2.2 is configured, domain verified, authorized, with No issues found in the MCP scan. Reviewer details are saved. Submission is now confirmed by the portal: version 0.2.2 In review / Not published. Screenshot artifacts/openai-submitted-0.2.2.jpg captures that state. The agent found review already active and did not attempt a duplicate submission. The daily monitor baseline was updated and the task browser tab closed.
+
+## October 8 publication
+
+Jack explicitly requested publication of the approved revision. OpenAI confirmed Plugin published and version 0.2.2 Published, with MCP Configured and skill Checks passed. The ChatGPT listing was directly verified at https://chatgpt.com/plugins/plugin_asdk_app_6ac079ad82f88191ade560b44f32ef12 with version 0.2.2 and an Install plugin button. Published release: pluginrel_ebdfe46c49348191abcc5be133297df6. Evidence screenshots: artifacts/openai-published-0.2.2.jpg and artifacts/chatgpt-dns-pilot-published-0.2.2.jpg. The task tab was closed and the completed daily approval monitor deleted. This publication does not enable real Namecheap connections or live DNS writes. No code changed, so existing test evidence was not rerun for the portal publication and documentation update.
