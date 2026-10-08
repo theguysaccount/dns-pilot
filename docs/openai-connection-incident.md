@@ -12,7 +12,7 @@ Public OAuth discovery and health return HTTP 200. Direct deployed OAuth PKCE, s
 
 Live Namecheap callback approval remains pending. Correcting the OpenAI connection record does not enable real Namecheap access.
 
-## Support report ready to send
+## Support report sent
 
 Subject: Published DNS Pilot 0.2.2 cannot install: missing app connection metadata and internal ID shown as name
 
@@ -37,4 +37,4 @@ Thank you.
 
 ## Delivery
 
-No support message has been sent. Explicit permission to send this report with the public endpoint, plugin identifiers, and failure screenshot has been requested. No credentials, access tokens, or reviewer passwords belong in the report or attachments.
+Jack explicitly authorized sending the prepared report and screenshot. On October 8, the report was sent in a new authenticated OpenAI Help Center support conversation, with artifacts/openai-connection-loop-2026-10-08.png attached. The sent report appears as You said in the conversation, and AI-assisted support replied. The reply suggested refreshing/reinstalling and asked about incognito and a second tester; those latter checks have not been performed. A follow-up was sent explaining that installation fails before an installed entry exists, requesting a technical case, the case number, and an actual referral to the team responsible for published app directory/connection configuration. No credentials, access tokens, or reviewer passwords were sent. The support UI offered escalation; it was confirmed and then displayed Escalation requested and Escalated to a support specialist, with replies also sent by email and a response expected in the coming days. No case number was shown. Repair is not confirmed. Private proof is saved in artifacts/openai-support-sent-2026-10-08.jpg.
