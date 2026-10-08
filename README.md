@@ -2,7 +2,7 @@
 
 Independent DNS workflows: preview exact changes, preserve unrelated records, flag email changes, and verify provider state separately from public DNS.
 
-**DNS Pilot 0.2.2 is approved and published in the OpenAI directory as of October 8, 2026.** [Install DNS Pilot in ChatGPT](https://chatgpt.com/plugins/plugin_asdk_app_6ac079ad82f88191ade560b44f32ef12). Public DNS lookup is available. Hosted Namecheap account connections and live writes remain disabled pending provider callback approval; sample record actions use an isolated reviewer workspace.
+**DNS Pilot 0.2.2 is approved and published in the OpenAI directory as of October 8, 2026.** [DNS Pilot ChatGPT listing](https://chatgpt.com/plugins/plugin_asdk_app_6ac079ad82f88191ade560b44f32ef12). The hosted public DNS lookup passes direct service tests, but ChatGPT installation currently fails while loading the included app connection; see [connection incident](docs/openai-connection-incident.md). Hosted Namecheap account connections and live writes remain disabled pending provider callback approval; sample record actions use an isolated reviewer workspace.
 
 [Website](https://dns-pilot.cuelayer.workers.dev) · [Downloads](https://github.com/theguysaccount/dns-pilot/releases) · [Support](https://dns-pilot.cuelayer.workers.dev/support) · [Release status](docs/public-launch.md)
 
